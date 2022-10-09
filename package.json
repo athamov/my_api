@@ -1,0 +1,47 @@
+{
+  "name": "my_api",
+  "version": "0.1.0",
+  "description": "My Api is app that uses CRUD method for working with fake cars json data and uses redis cacha and authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athamov/my_api.git"
+  },
+  "keywords": [
+    "my_api",
+    "redis",
+    "cache",
+    "express",
+    "node",
+    "authentication"
+  ],
+  "author": "Athamov Abdullox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athamov/my_api/issues"
+  },
+  "homepage": "https://github.com/athamov/my_api#readme",
+  "dependencies": {
+    "@apollo/client": "^3.7.0",
+    "apollo-server-express": "^3.10.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "graphql": "^16.6.0",
+    "graphql-modules": "^2.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.4",
+    "nodemon": "^2.0.20",
+    "redis": "^4.3.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
