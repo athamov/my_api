@@ -1,7 +1,43 @@
-# my_api
+# Welcome to My Api
+***
+
+## Task
+This app is Car database for getting data user need authorization
+
+## Description
+### used bcrypt to encrypt password 
+  See All auth funcion in auth.service file for
+### Auth Token cached with graphql cache feature
+### used mockaroo.com service for generating fake database
+
+## Installation
+I use yarn for this project
+```
+  yarn install 
+```
+but you can install packages via npm you need
 
 
-### add Authorization header to graphql
+delete yarn.lock file 
+```
+  npm install
+```
+
+## Usage
+for running used nodemon
+```
+  npm run start
+```
+after that open link via browser
+```
+  http://localhost:8080/graphql
+```
+it will open apollo 
+
+!!! after login do not forget to set Authorization header to graphql
+
+### The Core Team
+Athamov Abdullox
 
 ### graphql codes
 ```
