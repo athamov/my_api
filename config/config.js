@@ -5,7 +5,7 @@ const environment = {
         dbString: 'mongodb+srv://Goodboyz7:nurullox00@mycluster1.mqtqv.mongodb.net/myFirstDatabase'
     },
     production: {
-        serverURL: `http://localhost:${PORT}/`,
+        serverURL: `https://car-van-api.herokuapp.com`,
         dbString: 'mongodb+srv://Goodboyz7:nurullox00@mycluster1.mqtqv.mongodb.net/myFirstDatabase'
     }
 }
