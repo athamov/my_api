@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { environment } = require('../config/config');
 const { UserSchema } = require('./schema/userSchema');
 const { CarSchema } = require('./schema/carSchema');
 const env = process.env.NODE_ENV || "development";
@@ -8,7 +7,7 @@ const env = process.env.NODE_ENV || "development";
  * Mongoose Connection
 **/
 
-mongoose.connect(environment[env].dbString, {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

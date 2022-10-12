@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Auth = require('./services/auth.service');
-const { ApolloServer } = require('apollo-server-express')
-const resolvers = require('./data/resolvers.graphql')
+const { ApolloServer } = require('apollo-server-express');
+const resolvers = require('./data/resolvers.graphql');
 const typeDefs = require('./data/schema.graphql');
-const { PORT } = require('./config/config')
-const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache')
+const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache');
+const dotenv = require('dotenv');
+// retrieve env vars
+dotenv.config();
 
 /**
  * Create an Apollo server instance.
@@ -41,7 +43,7 @@ const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache')
   });
 
 
-  app.listen({ port: PORT }, () => {
+  app.listen({ port: process.env.PORT }, () => {
     console.log(
       `Server is running at http://localhost:${PORT}${server.graphqlPath}`
     );
