@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require("express");
 const mongoose = require("mongoose");
 const Auth = require('./services/auth.service');
@@ -5,9 +7,7 @@ const { ApolloServer } = require('apollo-server-express');
 const resolvers = require('./data/resolvers.graphql');
 const typeDefs = require('./data/schema.graphql');
 const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache');
-const dotenv = require('dotenv');
 // retrieve env vars
-dotenv.config();
 
 /**
  * Create an Apollo server instance.
@@ -45,7 +45,7 @@ dotenv.config();
 
   app.listen({ port: process.env.PORT }, () => {
     console.log(
-      `Server is running at http://localhost:${PORT}${server.graphqlPath}`
+      `Server is running at http://localhost:${process.env.PORT}${server.graphqlPath}`
     );
   });
  }

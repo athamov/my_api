@@ -6,8 +6,7 @@ const env = process.env.NODE_ENV || "development";
 /**
  * Mongoose Connection
 **/
-
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(`${process.env.MONGODB_URI}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
