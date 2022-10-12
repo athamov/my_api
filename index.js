@@ -35,6 +35,11 @@ const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache')
   //   'mongodb+srv://Goodboyz7:nurullox00@mycluster1.mqtqv.mongodb.net/myFirstDatabase',
   //   { useNewUrlParser: true, useUnifiedTopology: true }
   // )
+  app.get("/", (req, res) => {
+    console.log("Apollo GraphQL Express server is ready");
+    res.status(200).send("Apollo GraphQL Express server is ready");
+  });
+
 
   app.listen({ port: PORT }, () => {
     console.log(
@@ -43,8 +48,6 @@ const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache')
   });
  }
  
- app.get("/", (req, res) => {
-   console.log("Apollo GraphQL Express server is ready");
- });
+
  
 start()
