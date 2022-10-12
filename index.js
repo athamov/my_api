@@ -11,6 +11,7 @@ const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache')
  * Create an Apollo server instance.
  */
  const server = new ApolloServer({ 
+  apollo: {key:process.env.APOLLO_KEY},
   typeDefs, 
   resolvers,
   cache: new InMemoryLRUCache(),
