@@ -47,9 +47,5 @@ const {PORT} = require('./config/config')
  app.get("/", (req, res) => {
    console.log("Apollo GraphQL Express server is ready");
  });
-
- app.get('/users', (req, res) => {
-  res.send()
- })
  
 start()
