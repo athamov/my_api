@@ -16,7 +16,11 @@ const {PORT} = require('./config/config')
 /**
  * Create an Apollo server instance.
  */
- const server = new ApolloServer({ typeDefs, resolvers,context: req => {
+ const server = new ApolloServer({ 
+  typeDefs, 
+  resolvers,
+  cache: new InMemoryLRUCache(),
+  context: req => {
     // console.log(Auth.getUserId({req}));
   return {
     ...req,

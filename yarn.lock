@@ -583,6 +583,11 @@ apollo-server-types@^3.6.2:
     apollo-reporting-protobuf "^3.3.2"
     apollo-server-env "^4.2.1"
 
+apollo-utils@^1.3.33:
+  version "1.3.33"
+  resolved "https://registry.yarnpkg.com/apollo-utils/-/apollo-utils-1.3.33.tgz#856f25e96d32e5becfa49ebaf8d69ef17e1e147b"
+  integrity sha512-hJ/VSJS22hoO4fZ98Qjpx4cCKnkgGUsXRCgnXch7i7he9MRfrcFeVTwaq80AJXuwaRBMZEw7RSHcpxAGy/jCQg==
+
 "aproba@^1.0.3 || ^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-2.0.0.tgz#52520b8ae5b569215b354efc0caa3fe1e45a8adc"
