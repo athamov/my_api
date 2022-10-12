@@ -1,17 +1,11 @@
-// import express from "express";
 const express = require("express");
 const mongoose = require("mongoose");
-// import mongoose from 'mongoose';
-// import Auth from './services/auth.service';
 const Auth = require('./services/auth.service');
 const { ApolloServer } = require('apollo-server-express')
-// import { ApolloServer } from "apollo-server-express";
 const resolvers = require('./data/resolvers.graphql')
-// import { resolvers } from "./data/resolvers.graphql";
 const typeDefs = require('./data/schema.graphql');
-// import { typeDefs } from "./data/schema.graphql";
-const {PORT} = require('./config/config')
-// import { PORT } from "./config/config";
+const { PORT } = require('./config/config')
+const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache')
 
 /**
  * Create an Apollo server instance.
