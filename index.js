@@ -7,7 +7,6 @@ const { ApolloServer } = require('apollo-server-express');
 const resolvers = require('./data/resolvers.graphql');
 const typeDefs = require('./data/schema.graphql');
 const { InMemoryLRUCache } = require('@apollo/utils.keyvaluecache');
-const {ApolloServerPluginLandingPageDisabled} = require('apollo-server-core')
 // retrieve env vars
 
 /**
@@ -19,7 +18,6 @@ const {ApolloServerPluginLandingPageDisabled} = require('apollo-server-core')
   typeDefs, 
   resolvers,
   cache: new InMemoryLRUCache(),
-  plugins: [ApolloServerPluginLandingPageDisabled()],
   context: req => {
     // console.log(Auth.getUserId({req}));
   return {
