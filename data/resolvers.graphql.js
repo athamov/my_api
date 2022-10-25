@@ -33,8 +33,9 @@ module.exports = {
       const userPayload = email ? { email } : {username}
       const user = await User.findOne(userPayload)
       if (!user) throw new Error('Unknown user', userPayload)
-      // context.userId = user.id
-      const correctPassword = await Auth.matchPasswords(password, user.password)
+      context.userId = user.id
+      const correctPassword = await Auth.matchPasswords(password, user.password);
+      console.log(correctPassword);
       if (!correctPassword) throw new Error('invalid password');
       const jwt = Auth.generateJwt({
         userId: user.id,

@@ -12,7 +12,7 @@ class Auth {
   }
 
   static async matchPasswords(requestPwd, userPwd) {
-    return bcrypt.compare(requestPwd, userPwd)
+    return bcrypt.compare(requestPwd, userPwd);
   }
 
   static generateJwt({ username, email, userId }) {
@@ -24,7 +24,9 @@ class Auth {
   }
 
   static getJwtPayload(token) {
-    return jwt.verify(token, process.env.TOKEN_SECRET);
+    const payload = jwt.verify(token, process.env.TOKEN_SECRET);
+    console.log(payload);
+    return payload;
   }
 
   static getUserId({ req = {}, authToken = '' }) {
@@ -35,14 +37,13 @@ class Auth {
         if (!token) {
           return null
         }
-        const { userId } = this.getJwtPayload(token)
+        const { userId } = this.getJwtPayload(token);
         return userId;
       }
     } else if (authToken) {
       const { userId } = this.getJwtPayload(authToken)
       return userId
     }
-  
     return null
   }
 }

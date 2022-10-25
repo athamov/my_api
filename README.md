@@ -95,6 +95,6 @@ Athamov Abdullox
     "year":2005,
     "skip":10,
     "limit": 10,
-    "model": "Tahoe",
+    "model": "Tahoe"
   }
 ```
